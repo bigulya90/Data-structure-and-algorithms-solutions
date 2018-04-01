@@ -1,5 +1,7 @@
 """
 Merge sort implementation in Python.
+Time complexity: O(nlog n)
+Space complexity: O(n)
 """
 
 def mergeSort(alist):
