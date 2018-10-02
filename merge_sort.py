@@ -44,3 +44,9 @@ def mergeSort(alist):
 mergeSort([5,2,8,1,0,33,6,12])
 
 
+"""
+list of jobs [10,8,2,3,1,5]
+number of computes
+finish the job within smallest time 
+
+"""
