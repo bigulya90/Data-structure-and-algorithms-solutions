@@ -10,6 +10,7 @@ def parentheticals(message):
 
 print parentheticals("i love ) you ((")
 
+
 def get_closing_paren(sentence, opening_paren_index):
     open_nested_parens = 0
 
