@@ -33,7 +33,6 @@ def validator(list):
 
 list = "{[}()}"
 y = validator(list)
-print y
 
 
 def brackets(string_s):
@@ -55,5 +54,24 @@ def brackets(string_s):
     return not stack
 
 
-print brackets(list)
 
+
+def isValid(self, s):
+    """
+
+    """
+    stack = []
+
+    mapping = {")": "(", "}": "{", "]": "["}
+
+    for i in s:
+        if i in mapping:
+            if not stack:
+                return False
+            else:
+                last = stack.pop()
+                if mapping[i] != last:
+                    return False
+        else:
+            stack.append(i)
+    return not stack

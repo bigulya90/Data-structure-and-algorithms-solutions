@@ -6,6 +6,8 @@ N = 4
 # An Inplace function to rotate
 # N x N matrix by 90 degrees in
 # anti-clockwise direction
+
+
 def rotateMatrix(mat):
     # Consider all squares one by one
     for x in range(0, int(N / 2)):
@@ -88,7 +90,16 @@ def positive_rotation(matrix):
     for i in range(mat):
         matrix[i], matrix[l - i - 1] = matrix[l - i - 1], matrix[i]
 
+def rotate_matrix_90_positive(m):
+    l = len(m) - 1
 
+    for x in range(len(m)//2):
+        for y in range(x, l-x):
+            temp = m[x][y]
+            m[x][y] = m[l-y][x]
+            m[l-y][x] = m[l-y][l-x]
+            m[l-y][l-x] = m[y][l-x]
+            m[y][l-x] = temp
 
 
 

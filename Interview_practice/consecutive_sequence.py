@@ -18,6 +18,7 @@ def consecutive(alist):
     for j in range(length):
         if alist[j]-1 not in hash_list:
             temp = alist[j]
+
             while(temp in hash_list):
                 temp +=1
             count_num = max(count_num, temp - alist[j])

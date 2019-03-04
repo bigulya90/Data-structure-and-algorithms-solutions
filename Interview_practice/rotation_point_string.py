@@ -11,7 +11,7 @@ def rotation_points(word):
 
     while left < right:
         #mid = left + ((right - left) / 2)
-        mid = (left + right) / 2
+        mid = (left + right) // 2
 
         if word[mid] >= first_word:
             left = mid
@@ -23,6 +23,7 @@ def rotation_points(word):
 
 
 word = ['k', 'v', 'a', 'b', 'c', 'd', 'e', 'g', 'i']
-numbers = [4, 5, 6, 1, 2, 3]
-print (rotation_points(word))
+numbers = [3, 4, 5, 1, 2]
+
+print (rotation_points(numbers))
 

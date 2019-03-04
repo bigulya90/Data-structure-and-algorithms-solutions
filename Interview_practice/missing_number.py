@@ -10,4 +10,4 @@ def function(arr):
     result = end*(end-start)/2 - sum(end, start)
     return result
 
-print function([1, 2, 3, 4, 5, 7, 8, 9, 10])
+function([1, 2, 3, 4, 5, 7, 8, 9, 10])

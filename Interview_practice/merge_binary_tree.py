@@ -6,6 +6,7 @@ The depth of the recursion tree can go upto n in case of a skewed tree. In avera
 
 """
 
+
 class NodeTree(object):
     def __init__(self, x):
         self.value = x
@@ -13,8 +14,10 @@ class NodeTree(object):
         self.right = None
 
     def merge_tree(self, t1, t2):
+
         if t1 == None:
             return t2
+
         if t2 == None:
             return t1
 
@@ -23,18 +26,15 @@ class NodeTree(object):
         t1.right = self.merge_tree(t1.right, t2.right)
         return t1
 
-
-
-
-
     def mergeTrees_iterative(self, t1, t2):
-        """
-        """
+
         if t1 is None:
             return t2
 
         stack = []
+
         stack.append((t1, t2))
+
         while stack:
             t = stack.pop()
             if t[1] is None:

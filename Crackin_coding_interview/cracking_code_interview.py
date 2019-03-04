@@ -34,10 +34,30 @@ def checker(st1, st2):
             return False
     return True
 
-
 st1 = "biga"
 st2 = "vvfg"
 print (checker(st1, st2))
+
+def if_two_words_are_permutations(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    dic = {}
+    for ch in s1:
+        if ch in dic.keys():
+            dic[ch] += 1
+        else:
+            dic[ch] = 1
+    for ch in s2:
+        if ch not in dic.keys():
+            return False
+        elif dic[ch] == 0:
+            return False
+        else:
+            dic[ch] -= 1
+    return True
+
+
+print (if_two_words_are_permutations("biga", "dani"))
 
 
 """3. Replace space with %"""
@@ -47,7 +67,9 @@ def replace_token_inplace(s, token=" "):
             yield "20%"
         else:
             yield char
-print replace_token_inplace("biga a girl")
+
+
+replace_token_inplace("biga a girl")
 
 
 """4. Palindrome permutation"""
@@ -62,6 +84,7 @@ def Palindrome_permutation(the_string):
         else:
             unpair_char.add(char)
     return len(unpair_char) <= 1
+
 print (Palindrome_permutation("biga"))
 
 
@@ -91,7 +114,7 @@ def compression(the_string):
         else: break
     return the_string
 
-print compression("aabbbccc")
+compression("aabbbccc")
 
 
 """7. Rotate matrix positive 90"""
@@ -105,6 +128,7 @@ def matrix(mat):
 
     for i in range(m):
         mat[i], mat[l-i-1] = mat[l-i-1], mat[i]
+
 
 def negative_rotation(mat):
     n = len(mat)

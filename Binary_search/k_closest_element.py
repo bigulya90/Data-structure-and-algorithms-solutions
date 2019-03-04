@@ -36,4 +36,4 @@ def findClosestElements(arr, k, x):
     return list(answers)
 
 
-print findClosestElements([1,2,3,4,5], k=4, x=3)
+print (findClosestElements([1,2,3,4,5], k=4, x=3))
