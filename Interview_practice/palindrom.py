@@ -11,4 +11,4 @@ def check_for_palindrom(message):
         return len(odd) <=1
 
 
-print check_for_palindrom("civi")
+print (check_for_palindrom("civi"))

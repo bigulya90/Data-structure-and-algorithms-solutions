@@ -26,6 +26,7 @@ def merge_lists(my_list, alices_list):
     current_index_alices = 0
     current_index_mine = 0
     current_index_merged = 0
+
     while current_index_merged < merged_list_size:
         first_unmerged_alices = alices_list[current_index_alices]
         first_unmerged_mine = my_list[current_index_mine]

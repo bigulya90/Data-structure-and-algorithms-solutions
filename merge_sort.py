@@ -4,6 +4,7 @@ Time complexity: O(nlog n)
 Space complexity: O(n)
 """
 
+
 def mergeSort(alist):
     print ("Splitting list ", alist)
 

@@ -50,12 +50,8 @@
 # print(alist)
 #
 #
-#
-#
-#
-#
-#
-#
+
+
 def partition(alist, first, last):
     pivot_value = alist[first]
 
@@ -79,25 +75,26 @@ def partition(alist, first, last):
             alist[left] = alist[right]
             alist[right] = temp
 
+
     temp = alist[first]
     alist[first] = alist[right]
     alist[right] = temp
 
     return right
 
+
 def sortHelper(alist, first, last):
+    if first < last:
 
-    position = partition(alist, first, last)
+        position = partition(alist, first, last)
 
-    sortHelper(alist, first, position-1)
-    sortHelper(alist, position + 1, last)
+        sortHelper(alist, first, position-1)
+        sortHelper(alist, position + 1, last)
 
-
-def quickSort(alist):
-    sortHelper(alist, 0, len(alist)-1)
 
 alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-quickSort(alist)
+n = len(alist)
+sortHelper(alist, 0, n-1)
 print(alist)
 
 

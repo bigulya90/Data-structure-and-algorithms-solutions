@@ -22,7 +22,7 @@ def binary(alist, item):
         return found
 
 
-print binary([1,2,3,4,5,6,7], 0)
+print (binary([1,2,3,4,5,6,7], 0))
 
 
 """
@@ -43,7 +43,6 @@ def recBinary(alist, item):
                 return recBinary(alist[midpoint+1:], item)
 
 
-print recBinary([1,2,3,4,56], 9)
 
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,6 +118,7 @@ n = len(arr1)
 key = 3
 print("Index of the element is : ",
       pivotedBinarySearch(arr1, n, key))
+
 
 
 
